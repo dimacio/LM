@@ -1,5 +1,4 @@
 Flask
 SQLAlchemy
 requests
-flask-heroku
 gunicorn
