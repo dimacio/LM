@@ -1,0 +1,62 @@
+
+{% extends 'bootstrap/base.html' %}
+
+<!-- CSS style
+================================================== -->
+{% block styles %}
+  {{super()}}
+  <link href="{{url_for('.static',filename='css/carousel.css')}}" rel="stylesheet">
+
+{% endblock %}
+
+<!-- Title
+================================================== -->
+{% block title %}
+    {% if title %}{{ title }} Bionanotec {% else %} Bienvenidxs a Bionanotec{% endif %}
+{% endblock %}
+
+  <body>
+<!-- NAVBAR
+================================================== -->
+    {% block navbar %}
+    <div class="navbar-wrapper">
+       <div class="container">
+
+         <nav class="navbar navbar-inverse navbar-static-top">
+           <div class="container">
+             <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed"
+               data-toggle="collapse" data-target="#navbar"
+               aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ url_for('home') }}">Bionanotec</a>
+            </div>
+            <!-- el siguiente id tiene que ser el data-target del button pero
+            sin el hashtag para que lo reconozca-->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                    <li><a href="{{ url_for('equipo') }}">¿Quienes somos?</a></li>
+                    <li><a href="{{ url_for('investigación') }}">Investigación</a></li>
+                    <li><a href="{{ url_for('publicaciones') }}">Publicaciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}
+
+    <div class="container">
+        {%block content%}
+<! -- is replaced by the child html node! -->
+        {%endblock%}
+    </div>
+  </body>
