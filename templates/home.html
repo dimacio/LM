@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<hr class="featurette-divider">
+
+
+    <div class="logo">
+        <img src="{{url_for('static',filename='media/LM logo.png')}}"
+         style="display: block;margin: auto;" >
+    </div>
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- START JUMBOTRON-->
+
+      <div class="row featurette">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+            </div>
+       </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+
+      <!-- /END THE JUMBOTRON -->
+
+
+<hr class="featurette-divider">
+
+<!-- Three columns of text below the jumbo -->
+
+<div class="row">
+  <div class="col-lg-4">
+    <img class="img-circle" src="{{url_for('static',filename=''media/LM logo.png'')}}" alt="logo" width="140" height="140" style="display: block;margin: auto;" >
+    <h2>Zaraza</h2>
+    <p>qwretghyurito;ylkstrgkjhbg;lrjehlke'optiro'plknrgerjg</p>
+    <p><a class="btn btn-default" href="{{ url_for('investigación') }}" role="button">View details &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-4">
+    <img class="img-circle" src="{{url_for('static',filename='media/LM logo')}}" alt="Generic placeholder image" width="140" height="140" style="display: block;margin: auto;" >
+    <h2>Otra Zaraza</h2>
+    <p>Afs;sdhgirheg;otrhj;ijn</p>
+    <p>dsgf;'hajojetrh</p>
+    <p><a class="btn btn-default" href="{{ url_for('investigación') }}" role="button">View details &raquo;</a></p>
+         </div><!-- /.col-lg-4 -->
+<div class="col-lg-4">
+    <img class="img-circle" src="{{url_for('static',filename='media/LM logo')}}"  alt="Generic placeholder image" width="140" height="140" style="display: block;margin: auto;" >
+    <h2>ultima zaraza </h2>
+    <p>'dfrjhg'trfsjh'trpojk'rtj</p>
+    <p><a class="btn btn-default" href="{{ url_for('investigación') }}" role="button">View details &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+</div><!-- /.row -->
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2023 Laboratorios Margall  &middot; <a href="https://github.com/dimacio">Hecho por Dimacio</a> </p>
+      </footer>
+
+    </div><!-- /.container -->
+{% endblock %}
