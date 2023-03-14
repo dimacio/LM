@@ -3,28 +3,28 @@
 <!-- here we add our contact forms -->
 {% block content %}
 <div class="contacto">
-    <h3>Contact us</h3>
+    <h3>Contactanos</h3>
     <form action="{{ url_for('contacto') }}" method=post>
         <div>
             <!-- name forms -->
             <p>
                 {{ form.name.label }} <br>
-                {{ form.name(placeholder='Your name') }}
+                {{ form.name(placeholder='nombre ...') }}
             </p>
             <!-- email forms -->
             <p>
                 {{ form.email.label }} <br>
-                {{ form.email(placeholder='Your e-mail ...') }}
+                {{ form.email(placeholder='e-mail ...') }}
             </p>
             <!-- Subject of your request -->
             <p>
                 {{ form.subject.label }}<br>
-                {{form.subject(placeholder='Your subject ...')}}
+                {{form.subject(placeholder='tema ...')}}
             </p>
             <!-- Content of your request -->
             <p>
                 {{ form.message.label }}<br>
-                {{ form.message(placeholder='Write your request ...') }}
+                {{ form.message(placeholder='consulta ...') }}
             </p>
             <!-- Submit button -->
             <p>
