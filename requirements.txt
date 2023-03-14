@@ -3,4 +3,6 @@ SQLAlchemy
 requests
 gunicorn
 Flask-Bootstrap
+pandas
+flask_wtf
 
