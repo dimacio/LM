@@ -5,4 +5,5 @@ gunicorn
 Flask-Bootstrap
 pandas
 flask_wtf
+flask_mail
 
