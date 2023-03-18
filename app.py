@@ -9,15 +9,18 @@ bootstrap = Bootstrap(app)
 
 app.secret_key = os.urandom(24)
 
-mail_settings = {
-    "MAIL_SERVER": 'smtp.gmail.com',
-    "MAIL_PORT": 587,
-    "MAIL_USE_TLS": False,
-    "MAIL_USE_SSL": True,
-   
-}
+
+app.config['MAIL_SERVER']='sandbox.smtp.mailtrap.io'
+app.config['MAIL_PORT'] = 2525
+app.config['MAIL_USERNAME'] = 'fabc0cf92610c9'
+app.config['MAIL_PASSWORD'] = 'b9986cb14c0b16'
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+
+
 
 mail = Mail(app)
+
 @app.route("/")
 def home():
     return render_template("home.html")
@@ -42,7 +45,7 @@ def contacto():
         res = pd.DataFrame({'name': name, 'email': email, 'subject': subject, 'message': message}, index=[0])
         #res.to_csv('./contactusMessage.csv')
         msg = Message('Hello', sender = email, recipients = ['test.mail.protocol.lm@gmail.com'])
-        msg.body = res
+        msg.body = res.to_json()
         mail.send(msg)
         return render_template('contacto.html', form=form)
     else:
